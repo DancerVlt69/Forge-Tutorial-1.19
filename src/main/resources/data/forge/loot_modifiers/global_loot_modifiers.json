@@ -1,6 +1,11 @@
 {
   "replace": false,
   "entries": [
-    "tutorialmod:blueberry_seeds_from_grass"
+    "tutorialmod:blueberry_seeds_from_grass",
+    "tutorialmod:blueberries_in_desert_chests",
+    "tutorialmod:blueberries_in_plains_chests",
+    "tutorialmod:blueberries_in_snowy_chests",
+    "tutorialmod:glow_berries_from_tall_grass",
+    "tutorialmod:sweet_berries_from_large_fern"
   ]
 }
