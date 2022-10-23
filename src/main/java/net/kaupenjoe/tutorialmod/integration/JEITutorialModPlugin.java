@@ -5,7 +5,6 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
-import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.recipe.GemInfusingStationRecipe;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
@@ -14,6 +13,8 @@ import net.minecraft.world.item.crafting.RecipeManager;
 import java.util.List;
 import java.util.Objects;
 
+import static net.kaupenjoe.tutorialmod.TutorialMod.MOD_ID;
+
 @JeiPlugin
 public class JEITutorialModPlugin implements IModPlugin {
     public static RecipeType<GemInfusingStationRecipe> INFUSION_TYPE =
@@ -21,7 +22,7 @@ public class JEITutorialModPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(TutorialMod.MOD_ID, "jei_plugin");
+        return new ResourceLocation(MOD_ID, "jei_plugin");
     }
 
     @Override

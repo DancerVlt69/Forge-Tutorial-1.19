@@ -1,16 +1,17 @@
 package net.kaupenjoe.tutorialmod.client;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
 
+import static net.kaupenjoe.tutorialmod.TutorialMod.MOD_ID;
+
 public class ThirstHudOverlay {
-    private static final ResourceLocation FILLED_THIRST = new ResourceLocation(TutorialMod.MOD_ID,
+    private static final ResourceLocation FILLED_THIRST = new ResourceLocation(MOD_ID,
             "textures/thirst/filled_thirst.png");
-    private static final ResourceLocation EMPTY_THIRST = new ResourceLocation(TutorialMod.MOD_ID,
+    private static final ResourceLocation EMPTY_THIRST = new ResourceLocation(MOD_ID,
             "textures/thirst/empty_thirst.png");
 
     public static final IGuiOverlay HUD_THIRST = ((gui, poseStack, partialTick, width, height) -> {

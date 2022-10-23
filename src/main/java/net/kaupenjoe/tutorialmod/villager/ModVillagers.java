@@ -1,7 +1,6 @@
 package net.kaupenjoe.tutorialmod.villager;
 
 import com.google.common.collect.ImmutableSet;
-import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
@@ -14,11 +13,13 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.lang.reflect.InvocationTargetException;
 
+import static net.kaupenjoe.tutorialmod.TutorialMod.MOD_ID;
+
 public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPES =
-            DeferredRegister.create(ForgeRegistries.POI_TYPES, TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.POI_TYPES, MOD_ID);
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS =
-            DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, TutorialMod.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, MOD_ID);
 
     public static final RegistryObject<PoiType> JUMPY_BLOCK_POI = POI_TYPES.register("jumpy_block_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.JUMPY_BLOCK.get().getStateDefinition().getPossibleStates()),

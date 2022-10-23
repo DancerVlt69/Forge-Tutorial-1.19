@@ -1,7 +1,6 @@
 package net.kaupenjoe.tutorialmod.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.ModEntityTypes;
 import net.kaupenjoe.tutorialmod.entity.custom.ChomperEntity;
 import net.kaupenjoe.tutorialmod.item.ModItems;
@@ -35,8 +34,10 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 
+import static net.kaupenjoe.tutorialmod.TutorialMod.MOD_ID;
+
 public class ModEvents {
-    @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID)
+    @Mod.EventBusSubscriber(modid = MOD_ID)
     public static class ForgeEvents {
         @SubscribeEvent
         public static void addCustomTrades(VillagerTradesEvent event) {
@@ -65,7 +66,7 @@ public class ModEvents {
         public static void onAttachCapabilitiesPlayer(AttachCapabilitiesEvent<Entity> event) {
             if(event.getObject() instanceof Player) {
                 if(!event.getObject().getCapability(PlayerThirstProvider.PLAYER_THIRST).isPresent()) {
-                    event.addCapability(new ResourceLocation(TutorialMod.MOD_ID, "properties"), new PlayerThirstProvider());
+                    event.addCapability(new ResourceLocation(MOD_ID, "properties"), new PlayerThirstProvider());
                 }
             }
         }
@@ -123,7 +124,7 @@ public class ModEvents {
         }
     }
 
-    @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ModEventBusEvents {
         @SubscribeEvent
         public static void entityAttributeEvent(EntityAttributeCreationEvent event) {

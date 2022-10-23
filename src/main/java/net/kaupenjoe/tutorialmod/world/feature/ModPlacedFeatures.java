@@ -1,6 +1,5 @@
 package net.kaupenjoe.tutorialmod.world.feature;
 
-import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -13,9 +12,11 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 
+import static net.kaupenjoe.tutorialmod.TutorialMod.MOD_ID;
+
 public class ModPlacedFeatures {
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
-            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, TutorialMod.MOD_ID);
+            DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, MOD_ID);
 
 
     public static final RegistryObject<PlacedFeature> ZIRCON_ORE_PLACED = PLACED_FEATURES.register("zircon_ore_placed",

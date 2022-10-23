@@ -9,7 +9,6 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.recipe.GemInfusingStationRecipe;
 import net.minecraft.network.chat.Component;
@@ -18,10 +17,12 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 
+import static net.kaupenjoe.tutorialmod.TutorialMod.MOD_ID;
+
 public class GemInfusingStationRecipeCategory implements IRecipeCategory<GemInfusingStationRecipe> {
-    public final static ResourceLocation UID = new ResourceLocation(TutorialMod.MOD_ID, "gem_infusing");
+    public final static ResourceLocation UID = new ResourceLocation(MOD_ID, "gem_infusing");
     public final static ResourceLocation TEXTURE =
-            new ResourceLocation(TutorialMod.MOD_ID, "textures/gui/gem_infusing_station_gui.png");
+            new ResourceLocation(MOD_ID, "textures/gui/gem_infusing_station_gui.png");
 
     private final IDrawable background;
     private final IDrawable icon;

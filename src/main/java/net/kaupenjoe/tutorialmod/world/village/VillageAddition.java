@@ -1,7 +1,6 @@
 package net.kaupenjoe.tutorialmod.world.village;
 
 import com.mojang.datafixers.util.Pair;
-import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -17,7 +16,9 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.ArrayList;
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID)
+import static net.kaupenjoe.tutorialmod.TutorialMod.MOD_ID;
+
+@Mod.EventBusSubscriber(modid = MOD_ID)
 public class VillageAddition {
     private static final ResourceKey<StructureProcessorList> EMPTY_PROCESSOR_LIST_KEY = ResourceKey.create(
             Registry.PROCESSOR_LIST_REGISTRY, new ResourceLocation("minecraft", "empty"));

@@ -1,8 +1,6 @@
 package net.kaupenjoe.tutorialmod.networking.packet;
 
-import net.kaupenjoe.tutorialmod.block.custom.GemInfusingStationBlock;
 import net.kaupenjoe.tutorialmod.block.entity.GemInfusingStationBlockEntity;
-import net.kaupenjoe.tutorialmod.client.ClientThirstData;
 import net.kaupenjoe.tutorialmod.screen.GemInfusingStationMenu;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
